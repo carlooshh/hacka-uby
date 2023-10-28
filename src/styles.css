@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: "Flama Book";
+  font-style: normal;
+  src: url("./assets/fonts/Flama-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Flama Book Medium";
+  font-style: normal;
+  src: url("./assets/fonts/Flama-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Flama Book Semibold";
+  font-style: normal;
+  src: url("./assets/fonts/Flama-Semibold.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Flama Book";
+}
