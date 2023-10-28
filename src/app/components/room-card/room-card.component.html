@@ -1,0 +1,115 @@
+<div class="card">
+  <div
+    fxLayout="row"
+    fxLayoutAlign="space-between"
+    class="offer-card-header-container"
+  >
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div fxLayout="column" class="offer-card-title-container">
+        <h2
+          class="offer-card-title no-margin body-1 semibold-weight regular-font"
+        >
+          {{ product }}
+        </h2>
+        <h3
+          class="offer-card-transaction-type no-margin body-2 medium-weight regular-font"
+        >
+          {{ modality }}
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div
+    class="offer-card-content-container"
+    fxLayout="row"
+    fxLayoutAlign="space-between"
+  >
+    <div fxLayout="column">
+      <div fxLayout="column">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <img
+            src="../../../assets/icons/pin.svg"
+            class="offer-card-spacing-icon"
+          />
+          <h2 class="body-2 no-margin semibold-weight black regular-font">
+            {{ city }} / {{ state }}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center" *ngIf="temp>0">
+      <div *ngIf="temp===2"
+        fxLayout="row"
+        fxLayoutAlign="end center"
+        class="container-radius-temp color-temp-green"
+      >
+        <h1
+          class="body-2 no-margin semibold-weight white margin-right-2 regular-font"
+        >
+          Frio
+        </h1>
+        <img
+          src="../../../assets/icons/rain.svg"
+          class="offer-card-spacing-icon margin-left-4"
+        />
+      </div>
+      <div *ngIf="temp===3"
+        fxLayout="row"
+        fxLayoutAlign="end center"
+        class="container-radius-temp color-temp-orange"
+      >
+        <h1
+          class="body-2 no-margin semibold-weight white margin-right-2 regular-font"
+        >
+          Morno
+        </h1>
+        <img
+          src="../../../assets/icons/warm.svg"
+          class="offer-card-spacing-icon margin-left-4"
+        />
+      </div>
+      <div *ngIf="temp===1"
+        fxLayout="row"
+        fxLayoutAlign="end center"
+        class="container-radius-temp color-temp-red"
+      >
+        <h1
+          class="body-2 no-margin semibold-weight white margin-right-2 regular-font"
+        >
+          Quente
+        </h1>
+        <img
+          src="../../../assets/icons/fire.svg"
+          class="offer-card-spacing-icon margin-left-4"
+        />
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row">
+    <div class="width-50" fxLayout="row" fxLayoutAlign="start">
+      <div fxLayout="column">
+        <button
+          mat-button
+          class="body-2 regular-font button-background-color-green width-button-primary"
+          (click)="searchList()"
+        >
+          Detalhes
+        </button>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxLayout="column">
+        <button
+          mat-button
+          class="body-2 regular-font button-background-color-white width-button-secondary"
+          (click)="changeSituation()">
+          Mudar situação
+          <img
+          src="../../../assets/icons/next.svg"
+          class="icon-wrapper margin-left-4"
+        />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

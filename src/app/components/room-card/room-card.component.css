@@ -1,0 +1,280 @@
+/*FONTS*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  src: url('../../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
+    format('truetype');
+}
+.card{
+  background-color: #616161;
+}
+.regular-font {
+  font-family: 'Montserrat';
+}
+
+/* FONT SIZE */
+.headline-5 {
+  font-size: 31.3px;
+}
+.title {
+  font-size: 25px;
+}
+.subheading-2 {
+  font-size: 20px;
+}
+.body-1 {
+  font-size: 16px;
+}
+.body-2 {
+  font-size: 12.8px;
+}
+.caption {
+  font-size: 10.2px;
+}
+
+/* FONT WEIGHT */
+.regular-weight {
+  font-weight: 400;
+}
+.medium-weight {
+  font-weight: 500;
+}
+.semibold-weight {
+  font-weight: 600;
+}
+
+/*COLORS*/
+
+/*FONT COLORS*/
+.white {
+  color: #ffffff;
+}
+.grey-100 {
+  color: #e8e8e8;
+}
+.grey-200 {
+  color: #d0d0d0;
+}
+.grey-300 {
+  color: #bababa;
+}
+.black {
+  color: #2d2d2d;
+}
+.black-100 {
+  color: #7b7b7b;
+}
+.black-200 {
+  color: #616161;
+}
+.primary-100 {
+  color: #e8f4d9;
+}
+.primary-600 {
+  color: #67a22d;
+}
+.secondary-100 {
+  color: #c0c8d5;
+}
+.secondary-400 {
+  color: #2d3e65;
+}
+.error {
+  color: #d32f2f;
+}
+
+/*BACKGROUND COLORS*/
+.bg-primary {
+  background-color: #8cc63f !important;
+}
+.bg-error-100 {
+  background-color: #f9e0e0 !important;
+}
+.bg-secondary-100 {
+  background-color: #c0c8d5;
+}
+.bg-secondary-400 {
+  background-color: #2d3e65;
+}
+.bg-error {
+  background-color: #d32f2f;
+}
+/*UTILS*/
+.show {
+  display: block !important;
+}
+.no-show {
+  display: none !important;
+}
+.no-border {
+  border: none !important;
+}
+.no-margin {
+  margin: 0px !important;
+}
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+.margin-bottom-24 {
+  margin-bottom: 24px;
+}
+.margin-top-8 {
+  margin-top: 8px;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-top-16 {
+  margin-top: 16px;
+}
+.margin-top-24 {
+  margin-top: 24px;
+}
+.margin-right-4 {
+  margin-right: 4px;
+}
+.margin-right-2 {
+  margin-right: 2px;
+}
+.margin-right-8 {
+  margin-right: 8px;
+}
+.margin-left-4 {
+  margin-left: 4px;
+}
+.margin-left-2 {
+  margin-left: 2px;
+}
+.width-30 {
+  width: 30% !important;
+}
+.width-40 {
+  width: 40% !important;
+}
+.width-50 {
+  width: 50% !important;
+}
+.width-16-px {
+  width: 16px !important;
+}
+.height-16-px {
+  height: 16px !important;
+}
+
+/* GD OFFER CARD */
+.offer-card-footer-logo {
+  border-radius: 999px;
+  background-color: #67a22d;
+  width: 32px;
+  height: 32px;
+}
+.offer-card-icon {
+  max-width: 32px;
+  margin-right: 12px;
+}
+
+/* GD OFFER CARD */
+.offer-card {
+  border-left: 4px solid #67a22d;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(97, 97, 97, 0.2),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.1);
+  min-height: 236px;
+  max-width: 94%;
+  padding: 12px;
+  background-color: #ffffff;
+}
+.offer-card-coin-icon {
+  margin: 8px 8px 8px 12px;
+}
+.offer-card-icon {
+  max-width: 32px;
+  margin-right: 12px;
+}
+.offer-card-content-container {
+  border-radius: 8px;
+  background-color: #f4f9ec;
+  padding: 8px 8px 8px 8px;
+  margin: 4% 0% 4% 0%;
+}
+.offer-card-spacing-icon {
+  margin-right: 6px;
+}
+.offer-card-freight-name {
+  padding: 6px;
+  border-radius: 8px;
+}
+.offer-card-footer-logo {
+  border-radius: 999px;
+  background-color: #67a22d;
+  width: 32px;
+  height: 32px;
+}
+.card {
+  max-width: 650px;
+  max-height: 350px;
+  width: 370px;
+  height: 190px;
+  padding: 15px;
+  margin: 2% 0% 2% 0%;
+  border-radius: 6px;
+}
+/* GD-ICON */
+.icon-wrapper {
+  border-radius: 100px;
+  width: 8px;
+  height: 8px;
+}
+.icon-wrapper:hover {
+  background-color: #d0d0d0;
+  cursor: pointer;
+}
+
+/*button*/
+button, button:focus {
+  border-radius: 8px;
+  border: 3px;
+  height: 30px;
+  border: solid 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.button-background-color-green{
+  background-color: #67A22D;
+  color: white;
+}
+.button-background-color-white{
+  background-color: white;
+  color: #67A22D;
+}
+.width-button-primary{
+  width: 120px;
+}
+.width-button-secondary{
+  width: 190px;
+}
+
+/*Border*/
+.container-radius {
+  border: 1px solid #67a22d;
+  border-radius: 40px;
+  padding: 0px 8px 0px 8px;
+  max-width: 130px;
+}
+.container-radius-temp {
+  border-radius: 40px;
+  padding: 3px 8px 3px 8px;
+  max-width: 130px;
+  color: white;
+}
+.color-temp-orange {
+  background-color: #fcc836;
+}
+.color-temp-red {
+  background-color: #d32f2f;
+}
+.color-temp-green {
+  background-color: #8cc63f;
+}

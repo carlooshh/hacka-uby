@@ -13,6 +13,13 @@ const routes: Routes = [
       import('./core/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'manager',
+    loadChildren: () =>
+      import('./core/manager-solutions/manager-solutions.module').then(
+        (m) => m.ManagerSolutionsModule
+      ),
+  },
+  {
     path: 'idea',
     loadChildren: () =>
       import('./core/idea-form/idea-form.module').then((m) => m.IdeaFormModule),
