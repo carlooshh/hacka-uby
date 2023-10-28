@@ -1,0 +1,8 @@
+@import "../../../assets/theme/variables.scss";
+
+.example-class {
+  margin-top: 40px !important;
+  height: 100px;
+  background-color: yellow;
+  color: yellow;
+}
