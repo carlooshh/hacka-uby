@@ -1,15 +1,17 @@
 /*FONTS*/
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Flama Book";
   font-style: normal;
-  src: url('../../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
-    format('truetype');
+  src: url("../../../assets/fonts/Flama-Book.ttf") format("truetype");
 }
 .card{
   background-color: #616161;
 }
 .regular-font {
-  font-family: 'Montserrat';
+  font-family: "Flama Book";
+}
+.margin-8 {
+  padding: 8px;
 }
 
 /* FONT SIZE */
@@ -30,6 +32,9 @@
 }
 .caption {
   font-size: 10.2px;
+}
+.caption-1 {
+  font-size: 9.5px;
 }
 
 /* FONT WEIGHT */
@@ -211,13 +216,16 @@
   height: 32px;
 }
 .card {
-  max-width: 650px;
-  max-height: 350px;
-  width: 370px;
-  height: 190px;
   padding: 15px;
   margin: 2% 0% 2% 0%;
   border-radius: 6px;
+  max-width: 350px;
+  max-height: 250px;
+}
+.range{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* GD-ICON */
 .icon-wrapper {
@@ -261,12 +269,11 @@ button, button:focus {
   border: 1px solid #67a22d;
   border-radius: 40px;
   padding: 0px 8px 0px 8px;
-  max-width: 130px;
 }
 .container-radius-temp {
+  margin: 5px;
   border-radius: 40px;
   padding: 3px 8px 3px 8px;
-  max-width: 130px;
   color: white;
 }
 .color-temp-orange {
@@ -277,4 +284,27 @@ button, button:focus {
 }
 .color-temp-green {
   background-color: #8cc63f;
+}
+.space-description{
+  display: flex;
+}
+.left-description{
+max-width: 50%;
+}
+.right-description{
+ max-width: 50%;
+}
+.range-details{
+  max-width: 50%;
+}
+.container-details{
+  display: flex;
+  justify-content: space-between;
+}
+.container-details-temp{
+  max-width: 50%;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
 }

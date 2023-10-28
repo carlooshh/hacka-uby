@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-room-card',
@@ -7,22 +6,13 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./room-card.component.css']
 })
 export class RoomCardComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
+  constructor() {}
 
-  @Input() purchaseInitialBid!: string;
-  @Input() saleInitialBid!: string;
-  @Input() product!: string;
-  @Input() modality!: string;
-  @Input() consultant!: string;
-  @Input() city!: string;
-  @Input() state!: string;
-  @Input() date!: string;
-  @Input() roomId!: string;
-  statusByConsultant: number  =0;
-  purchaseFreight: number  =21.50;
-  saleFreight: number  = 23.50;
-  productId: number  =51;
-  quantity: number =10 ;
+  @Input() name!: string;
+  @Input() email!: string;
+  @Input() createdAt!: string;
+  @Input() details!: string;
+  @Input() tags!: { name: string }[];
 
   colorEnum = {
     quente: 1,
@@ -39,7 +29,7 @@ export class RoomCardComponent implements OnInit {
   }
 
   calculateTemperature() {
-    const difference = this.saleFreight - this.purchaseFreight;
+    const difference = 1;
     if (difference < 1) {
       return this.colorEnum.quente;
     } else if (difference >= 1 && difference <= 3) {

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -19,7 +18,6 @@ import { MatStepperModule } from '@angular/material/stepper';
     FormsModule,
     MatTabsModule,
     MatTooltipModule,
-    MatDialogModule,
     MatButtonToggleModule,
     MatChipsModule,
     MatNativeDateModule,
