@@ -15,57 +15,79 @@
   <mat-form-field appearance="outline" style="width: 100%">
     <mat-label>Nome</mat-label>
     <input
+      placeholder="Digite seu nome"
       class="regular-font"
       matInput
       type="textarea"
-      formControlName="passcode"
+      formControlName="name"
       required
       style="width: 100%"
     />
-    <mat-error *ngIf="formErrors.passcode" style="color: red; font-size: 12px">
-      {{ formErrors.passcode }}</mat-error
+    <mat-error *ngIf="formErrors.name" style="color: red; font-size: 12px">
+      {{ formErrors.name }}</mat-error
     >
   </mat-form-field>
 
   <mat-form-field appearance="outline" style="width: 100%">
     <mat-label>Email</mat-label>
     <input
+      placeholder="Digite seu email"
       class="regular-font"
       matInput
       type="textarea"
-      formControlName="passcode"
+      formControlName="email"
       required
       style="width: 100%"
     />
-    <mat-error *ngIf="formErrors.passcode" style="color: red; font-size: 12px">
-      {{ formErrors.passcode }}</mat-error
+    <mat-error *ngIf="formErrors.email" style="color: red; font-size: 12px">
+      {{ formErrors.email }}</mat-error
     >
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
+    <mat-label>Selecione o tema</mat-label>
+    <mat-select formControlName="challenge">
+      <mat-option value="Acesso ao mercado">Acesso ao mercado</mat-option>
+      <mat-option value="Carbono">Carbono</mat-option>
+      <mat-option value="Indústria 4.0">Indústria 4.0</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="outline" style="width: 100%">
     <mat-label>Solução</mat-label>
     <textarea
+      placeholder="Descreva sua ideia"
       class="regular-font"
       matInput
       type="textarea"
-      formControlName="passcode"
+      formControlName="solution"
       required
       style="width: 100%"
     ></textarea>
-    <mat-error *ngIf="formErrors.passcode" style="color: red; font-size: 12px">
-      {{ formErrors.passcode }}</mat-error
+    <mat-error *ngIf="formErrors.solution" style="color: red; font-size: 12px">
+      {{ formErrors.solution }}</mat-error
     >
   </mat-form-field>
 
-  <div class="btn-primary regular-font">
-    <span type="button"> Enviar </span>
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Justificativa</mat-label>
+    <textarea
+      placeholder="Qual o ganho que sua ideia trará para a empresa?"
+      class="regular-font"
+      matInput
+      type="textarea"
+      formControlName="gain"
+      required
+      style="width: 100%"
+    ></textarea>
+    <mat-error *ngIf="formErrors.gain" style="color: red; font-size: 12px">
+      {{ formErrors.gain }}</mat-error
+    >
+  </mat-form-field>
+
+  <div class="footer">
+    <div class="btn-primary">
+      <span type="button"> Enviar </span>
+    </div>
   </div>
 </form>
