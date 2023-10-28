@@ -1,1 +1,71 @@
-<div>bANIS</div>
+<div style="display: flex; justify-content: center; align-items: center">
+  <img src="../../../assets/icons/idea-form/idea.svg" alt="" />
+</div>
+
+<div class="typewriter">
+  <h1 class="title">Tire sua idéia do papel</h1>
+</div>
+
+<form
+  *ngIf="!isLoading"
+  style="margin: 12px 16px; font-size: 18px"
+  novalidate
+  [formGroup]="formGroup"
+>
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Nome</mat-label>
+    <input
+      class="regular-font"
+      matInput
+      type="textarea"
+      formControlName="passcode"
+      required
+      style="width: 100%"
+    />
+    <mat-error *ngIf="formErrors.passcode" style="color: red; font-size: 12px">
+      {{ formErrors.passcode }}</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Email</mat-label>
+    <input
+      class="regular-font"
+      matInput
+      type="textarea"
+      formControlName="passcode"
+      required
+      style="width: 100%"
+    />
+    <mat-error *ngIf="formErrors.passcode" style="color: red; font-size: 12px">
+      {{ formErrors.passcode }}</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Solução</mat-label>
+    <textarea
+      class="regular-font"
+      matInput
+      type="textarea"
+      formControlName="passcode"
+      required
+      style="width: 100%"
+    ></textarea>
+    <mat-error *ngIf="formErrors.passcode" style="color: red; font-size: 12px">
+      {{ formErrors.passcode }}</mat-error
+    >
+  </mat-form-field>
+
+  <div class="btn-primary regular-font">
+    <span type="button"> Enviar </span>
+  </div>
+</form>
