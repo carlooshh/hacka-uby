@@ -5,6 +5,8 @@ import { ManagerSolutionsComponent } from './manager-solutions.component';
 import { RoomCardComponent } from 'src/app/components/room-card/room-card.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     ManagerSolutionsRoutingModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatSidenavModule
   ],
   exports: [],
 })

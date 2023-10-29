@@ -5,7 +5,8 @@
   src: url("../../../assets/fonts/Flama-Book.ttf") format("truetype");
 }
 .card{
-  background-color: #616161;
+  background-color: white;
+  border: 1px #F2A88F solid;
 }
 .regular-font {
   font-family: "Flama Book";
@@ -86,6 +87,9 @@
 }
 .error {
   color: #d32f2f;
+}
+.color-title{
+  color: #A32322
 }
 
 /*BACKGROUND COLORS*/
@@ -198,7 +202,7 @@
 }
 .offer-card-content-container {
   border-radius: 8px;
-  background-color: #f4f9ec;
+  background-color: #ebe9e2;
   padding: 8px 8px 8px 8px;
   margin: 4% 0% 4% 0%;
 }
@@ -249,13 +253,15 @@ button, button:focus {
   justify-content: center;
   outline: none;
 }
-.button-background-color-green{
-  background-color: #67A22D;
+.button-background-color-red{
+  background-color: #EE3138;
   color: white;
+  cursor: pointer;
 }
 .button-background-color-white{
   background-color: white;
-  color: #67A22D;
+  color: #EE3138;
+  cursor: pointer;
 }
 .width-button-primary{
   width: 120px;
@@ -277,7 +283,7 @@ button, button:focus {
   color: white;
 }
 .color-temp-orange {
-  background-color: #fcc836;
+  background-color: #F2A88F;
 }
 .color-temp-red {
   background-color: #d32f2f;
