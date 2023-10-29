@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { IdeaService } from 'src/app/services/idea.service';
 
 @Component({
   selector: 'app-idea-form',
@@ -40,7 +41,11 @@ export class IdeaFormComponent implements OnInit {
     passcode: '',
   };
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute) {
+  constructor(
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private ideaService: IdeaService
+  ) {
     this.createForm();
   }
 
@@ -90,5 +95,17 @@ export class IdeaFormComponent implements OnInit {
         }
       }
     }
+  }
+
+  sendIdea() {
+    const idea: {
+      name: string;
+      email: string;
+      challenge: string;
+      solution: string;
+      gain: string;
+    } = this.formGroup.value;
+
+    this.ideaService.createIdea(idea);
   }
 }
