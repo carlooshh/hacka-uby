@@ -60,3 +60,36 @@ mat-form-field {
   flex-direction: row;
   justify-content: flex-end;
 }
+
+/* Estilos para a navegação */
+nav {
+  background-color: #EE3138;
+  color: #fff;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #EE3138;
+}
+

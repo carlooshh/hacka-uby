@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { environment } from '../../environments/environment';
@@ -26,6 +26,14 @@ export class IdeaService {
         solution,
         gain,
       })
+    );
+  }
+  getIds(challenge: string, status: string): Promise<string | undefined> {
+    let params = new HttpParams();
+    params = params.set('challenge', challenge);
+    params = params.set('status', status);
+    return firstValueFrom(
+      this.http.get<string>(`${environment.apiUrl}/api/idea`,{ params: params })
     );
   }
 }

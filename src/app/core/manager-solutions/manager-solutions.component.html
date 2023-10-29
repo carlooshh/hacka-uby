@@ -1,5 +1,11 @@
+<nav>
+  <ul>
+    <li><a routerLink="/idea">Cadastro</a></li>
+    <li><a routerLink="/manager">Gerenciar</a></li>
+    <li><a routerLink="/dash">Dashboard</a></li>
+  </ul>
+</nav>
 <div class="page">
-
   <mat-drawer-container>
 
 <div class="painel-header">
@@ -13,27 +19,16 @@
             Pendentes
           </h1>
         </div>
-        <div>
-          <h2 class="primary-subtitle body-2 black-200 regular-font">
-            {{ countItemsToDo }} item
-          </h2>
-        </div>
       </div>
       <div *ngFor="let item of itemsToDo">
         <app-room-card
-          name="{{item.name}}"
-          email="{{item.email}}"
-          createdAt="{{item.createdAt}}"
-          details="{{item.details}}"
+          name="{{item.user_name}}"
+          email="{{item.user_email}}"
+          createdAt="{{item.created_at}}"
+          details="{{item.gain}}"
           [tags]="item.details"
         ></app-room-card>
       </div>
-      <mat-paginator
-        [pageSize]="10"
-        [length]="countItemsToDo"
-        (page)="onPageChange($event, 0)"
-        class="small-paginator regular-font"
-      ></mat-paginator>
     </div>
     <div class="pipeline background-s-b1 no-margin">
       <div class="header-card">
@@ -42,27 +37,16 @@
             Aceitas
           </h1>
         </div>
-        <div>
-          <h2 class="primary-subtitle body-2 black-200 regular-font">
-            {{ countItemsPending }} item
-          </h2>
-        </div>
       </div>
-      <div *ngFor="let item of itemsPending">
+      <div *ngFor="let item of itemsDoing">
         <app-room-card
-          name="{{item.name}}"
-          email="{{item.email}}"
-          createdAt="{{item.createdAt}}"
-          details="{{item.details}}"
+          name="{{item.user_name}}"
+          email="{{item.user_email}}"
+          createdAt="{{item.created_at}}"
+          details="{{item.gain}}"
           [tags]="item.details"
         ></app-room-card>
       </div>
-      <mat-paginator
-        [pageSize]="10"
-        [length]="countItemsToDo"
-        (page)="onPageChange($event, 0)"
-        class="small-paginator regular-font"
-      ></mat-paginator>
     </div>
     <div class="pipeline background-s-b2 no-margin">
       <div class="header-card">
@@ -72,55 +56,35 @@
           </h1>
         </div>
         <div>
-          <h2 class="primary-subtitle body-2 black-200 regular-font">
-            {{ countItemsDoing }} item
-          </h2>
         </div>
       </div>
-      <div *ngFor="let item of itemsDoing">
+      <div *ngFor="let item of itemsApproved">
         <app-room-card
-          name="{{item.name}}"
-          email="{{item.email}}"
-          createdAt="{{item.createdAt}}"
-          details="{{item.details}}"
+          name="{{item.user_name}}"
+          email="{{item.user_email}}"
+          createdAt="{{item.created_at}}"
+          details="{{item.gain}}"
           [tags]="item.details"
         ></app-room-card>
       </div>
-      <mat-paginator
-        [pageSize]="10"
-        [length]="countItemsToDo"
-        (page)="onPageChange($event, 0)"
-        class="small-paginator regular-font"
-      ></mat-paginator>
     </div>
-    <div class="pipeline background-success-100 no-margin">
+    <div class="pipeline background-s-b  no-margin">
       <div class="header-card">
         <div>
           <h1 class="primary-subtitle body-1 black regular-font">
             Concluidas
           </h1>
         </div>
-        <div>
-          <h2 class="primary-subtitle body-2 black-200 regular-font">
-            {{ countItemsApproved }} item
-          </h2>
-        </div>
       </div>
-      <div *ngFor="let item of itemsApproved">
+      <div *ngFor="let item of itemsDone">
         <app-room-card
-          name="{{item.name}}"
-          email="{{item.email}}"
-          createdAt="{{item.createdAt}}"
-          details="{{item.details}}"
+          name="{{item.user_name}}"
+          email="{{item.user_email}}"
+          createdAt="{{item.created_at}}"
+          details="{{item.gain}}"
           [tags]="item.details"
         ></app-room-card>
       </div>
-      <mat-paginator
-        [pageSize]="10"
-        [length]="countItemsToDo"
-        (page)="onPageChange($event, 0)"
-        class="small-paginator regular-font"
-      ></mat-paginator>
     </div>
   </div>
   </mat-drawer-container>
