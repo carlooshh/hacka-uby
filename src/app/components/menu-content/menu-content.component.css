@@ -1,0 +1,47 @@
+table {
+  width: 100%;
+}
+
+mat-toolbar-row {
+  background-color: #ffffff;
+}
+mat-accordion {
+  background-color: aliceblue;
+}
+
+.center-aligned {
+  display: flex;
+  justify-content: center;
+  height: 56px;
+}
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  width: 100%;
+  background-color: #ffffff;
+  border: 0.5px;
+  text-align: start;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.button:hover {
+  background-color: #8cc63f; /* Green */
+  color: white;
+  height: 30px !important;
+}
+
+.increase-height {
+  height: 30px !important;
+  width: 100%;
+}
