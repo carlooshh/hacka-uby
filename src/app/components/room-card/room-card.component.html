@@ -9,8 +9,8 @@
   </div>
   <div class="offer-card-content-container container-details">
     <div class="container-details-temp">
-      <h2 class="body-2 no-margin semibold-weight black regular-font">criado em {{ createdAt }}</h2>
-      <p class="caption-1">Na minha opinião se o carlim é muito feio, ele é tolo...</p>
+      <h2 class="body-2 no-margin semibold-weight black regular-font">criado em {{ createdAt | date: 'dd/MM/yyyy' }}</h2>
+      <p class="caption-1">{{ details }}.</p>
     </div>
     <div class="container-details-temp">
       <div *ngFor="let tag of tags" class="container-radius-temp color-temp-orange range">
