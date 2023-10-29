@@ -13,16 +13,16 @@
       <p class="caption-1">Na minha opinião se o carlim é muito feio, ele é tolo...</p>
     </div>
     <div class="container-details-temp">
-      <div *ngFor="let tag of tags" class="container-radius-temp color-temp-red range">
-        <h1 class="body-2 no-margin semibold-weight white margin-right-2 regular-font">{{ tag.name }}</h1>
-        <img src="../../../assets/icons/rain.svg" class="offer-card-spacing-icon margin-left-4" />
+      <div *ngFor="let tag of tags" class="container-radius-temp color-temp-orange range">
+        <h1 class="body-2 no-margin semibold-weight color-title margin-right-2 regular-font">{{ tag.name }}</h1>
+        <img src="../../../assets/icons/alert-circle.svg" class="offer-card-spacing-icon margin-left-4" />
       </div>
     </div>
   </div>
   <div fxLayout="column" fxLayout.lt-md="row">
     <div class="footer">
       <div>
-        <button mat-button class="body-2 regular-font button-background-color-green width-button-primary" (click)="searchList()">Detalhes</button>
+        <button mat-button class="body-2 regular-font button-background-color-red width-button-primary" (click)="searchList()">Detalhes</button>
       </div>
       <div>
         <button mat-button class="body-2 regular-font button-background-color-white width-button-secondary" (click)="changeSituation()">
