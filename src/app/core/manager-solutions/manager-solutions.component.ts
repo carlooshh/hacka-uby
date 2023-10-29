@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ManagerSolutionsService } from 'src/app/service/manager-solutions.service';
+import { IdeaService } from 'src/app/services/idea.service';
 import { StatusEnum } from 'src/shared/enums/status.enum';
 
 @Component({
@@ -8,9 +8,9 @@ import { StatusEnum } from 'src/shared/enums/status.enum';
   templateUrl: './manager-solutions.component.html',
   styleUrls: ['./manager-solutions.component.css'],
 })
-export class ManagerSolutionsComponent {
+export class ManagerSolutionsComponent implements OnInit {
   constructor(
-    private readonly managerSolutionsService: ManagerSolutionsService
+    private readonly ideaService: IdeaService
   ) {}
 
   currentDate = new Date();
@@ -21,223 +21,48 @@ export class ManagerSolutionsComponent {
     productControl: new FormControl(),
     transactionTypeControl: new FormControl(),
   });
+  chalenge = 'Acesso a Mercado';
 
-  countItemsToDo: number = 3;
+  countItemsToDo: number = 0;
   countItemsDoing: number = 0;
-  countItemsPending: number = 4;
+  countItemsDone: number = 0;
   countItemsApproved: number = 0;
-  countItemsArchived: number = 0;
-  itemsToDo = [
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'viado' }, { name: 'zé' }, { name: 'Fernando' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-  ];
-  itemsDoing = [
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'viado' }, { name: 'zé' }, { name: 'Fernando' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-  ];
-  itemsPending = [
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'viado' }, { name: 'zé' }, { name: 'Fernando' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-  ];
-  itemsApproved = [
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'viado' }, { name: 'zé' }, { name: 'Fernando' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-  ];
-  itemsArchived = [
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'viado' }, { name: 'zé' }, { name: 'Fernando' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-    {
-      name: 'Fernando Victor',
-      email: 'fernando00sjp@hotmail.com',
-      createdAt: '10/10/2023',
-      details: [{ name: 'Fernando' }, { name: 'carlos' }, { name: 'João' }],
-    },
-  ];
+  itemsToDo: any[] | undefined;
+  itemsDoing: any[] | undefined;
+  itemsDone: any[] | undefined;
+  itemsApproved: any[] | undefined;
 
-  currentPageToDo: number = 1;
-  currentPageDoing: number = 1;
-  currentPagePositive: number = 1;
-  currentPageWrong: number = 1;
-  currentPageArchived: number = 1;
-
-  onPageChange(event: any, type: number) {
-    switch (type) {
-      case StatusEnum.toDo:
-        this.searchRoom(type, (this.currentPageToDo = event.pageIndex + 1));
-        break;
-      case StatusEnum.doing:
-        this.searchRoom(type, (this.currentPageDoing = event.pageIndex + 1));
-        break;
-      case StatusEnum.positive:
-        this.searchRoom(type, (this.currentPagePositive = event.pageIndex + 1));
-        break;
-      case StatusEnum.wrong:
-        this.searchRoom(type, (this.currentPageWrong = event.pageIndex + 1));
-        break;
-      case StatusEnum.archived:
-        this.searchRoom(type, (this.currentPageArchived = event.pageIndex + 1));
-        break;
-    }
+  async ngOnInit() {
+    await this.searchRoom(StatusEnum.toDo);
+    await this.searchRoom(StatusEnum.doing);
+    await this.searchRoom(StatusEnum.approved);
+    await this.searchRoom(StatusEnum.done);
   }
-  async searchRoom(pipeline: number, page: number) {
+
+  async searchRoom(pipeline: number) {
     if (pipeline == StatusEnum.toDo) {
-      this.countItemsToDo = await this.managerSolutionsService.countStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.toDo
-      );
-      this.itemsToDo = await this.managerSolutionsService.searchStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.toDo,
-        page
-      );
+      const ids = await this.ideaService.getIds(this.chalenge, 'PENDING');
+      this.itemsToDo = ids ? [ids] : [];
+      this.countItemsToDo = this.itemsToDo[0].length;
+      this.itemsToDo = this.itemsToDo[0];
     }
     if (pipeline == StatusEnum.doing) {
-      this.countItemsDoing = await this.managerSolutionsService.countStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.doing
-      );
-      this.itemsDoing = await this.managerSolutionsService.searchStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.doing,
-        page
-      );
+      const ids = await this.ideaService.getIds(this.chalenge, 'DOING');
+      this.itemsDoing = ids ? [ids] : [];
+      this.countItemsDoing = this.itemsDoing[0].length;
+      this.itemsDoing = this.itemsDoing[0];
     }
-    if (pipeline == StatusEnum.positive) {
-      this.countItemsPending = await this.managerSolutionsService.countStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.positive
-      );
-      this.itemsPending = await this.managerSolutionsService.searchStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.positive,
-        page
-      );
+    if (pipeline == StatusEnum.approved) {
+      const ids = await this.ideaService.getIds(this.chalenge, 'DONE');
+      this.itemsApproved = ids ? [ids] : [];
+      this.countItemsApproved = this.itemsApproved[0].length ;
+      this.itemsApproved = this.itemsApproved[0];
     }
-    if (pipeline == StatusEnum.wrong) {
-      this.countItemsApproved = await this.managerSolutionsService.countStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.wrong
-      );
-      this.itemsApproved = await this.managerSolutionsService.searchStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.wrong,
-        page
-      );
-    }
-    if (pipeline == StatusEnum.archived) {
-      this.countItemsArchived = await this.managerSolutionsService.countStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.archived
-      );
-      this.itemsArchived = await this.managerSolutionsService.searchStatus(
-        this.searchNegotiationsForm,
-        StatusEnum.archived,
-        page
-      );
+    if (pipeline == StatusEnum.done) {
+      const ids = await this.ideaService.getIds(this.chalenge, 'DONE');
+      this.itemsDone = ids ? [ids] : [];
+      this.countItemsDone = this.itemsDone[0].length;
+      this.itemsDone = this.itemsDone[0];
     }
   }
 }
