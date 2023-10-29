@@ -1,12 +1,5 @@
 @import "../../../assets/theme/variables.scss";
 
-@font-face {
-  font-family: "Flama Book";
-  font-style: normal;
-  src: url("../../../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
-    format("truetype");
-}
-
 .title {
   font-family: "Flama Book";
   font-size: 2rem;
