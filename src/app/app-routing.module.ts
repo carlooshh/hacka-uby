@@ -24,6 +24,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core/idea-form/idea-form.module').then((m) => m.IdeaFormModule),
   },
+  {
+    path: 'dash',
+    loadChildren: () =>
+      import('./core/dash-manage/dash-manage.module').then((m) => m.DashManageModule),
+  },
 ];
 
 @NgModule({
