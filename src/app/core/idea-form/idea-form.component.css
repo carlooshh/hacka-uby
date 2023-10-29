@@ -54,8 +54,16 @@ mat-form-field {
 }
 
 .btn-primary {
+  font-family: "Flama Book Semibold";
+  width: 60px;
   background-color: #ee3138;
   color: #fff;
   border-radius: 8px;
-  padding: 16px;
+  padding: 8px 16px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
