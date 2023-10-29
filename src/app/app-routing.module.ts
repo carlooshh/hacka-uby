@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./core/home/home.module').then((m) => m.HomeModule),
+      import('./core/idea-form/idea-form.module').then((m) => m.IdeaFormModule),
   },
   {
     path: 'home',
