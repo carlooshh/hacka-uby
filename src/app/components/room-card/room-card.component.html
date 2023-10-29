@@ -1,70 +1,33 @@
 <div class="card" style="overflow: auto;">
-  <div
-    fxLayout="row"
-    fxLayoutAlign="space-between"
-    class="offer-card-header-container"
-  >
-    <div fxLayout="row" fxLayoutAlign="start center">
-      <div fxLayout="column" class="offer-card-title-container">
-        <h2
-          class="offer-card-title no-margin body-1 semibold-weight regular-font"
-        >
-          {{ name }}
-        </h2>
-        <h3
-          class="offer-card-transaction-type no-margin body-2 medium-weight regular-font"
-        >
-          {{ email }}
-        </h3>
+  <div fxLayout="column" fxLayout.lt-md="row" fxLayoutAlign.lt-md="space-between" class="offer-card-header-container">
+    <div fxLayout="column" fxLayout.lt-md="row" fxLayoutAlign="start center" fxLayoutAlign.lt-md="start">
+      <div fxLayout="column" class="offer-card-title-container" fxLayout.lt-md="row">
+        <h2 class="offer-card-title no-margin body-1 semibold-weight regular-font">{{ name }}</h2>
+        <h3 class="offer-card-transaction-type no-margin body-2 medium-weight regular-font">{{ email }}</h3>
       </div>
     </div>
   </div>
   <div class="offer-card-content-container container-details">
     <div class="container-details-temp">
-      <h2 class="body-2 no-margin semibold-weight black regular-font">
-       criado em {{ createdAt }}
-      </h2>
+      <h2 class="body-2 no-margin semibold-weight black regular-font">criado em {{ createdAt }}</h2>
       <p class="caption-1">Na minha opinião se o carlim é muito feio, ele é tolo...</p>
     </div>
     <div class="container-details-temp">
-      <div
-        *ngFor="let tag of tags"
-        class="container-radius-temp color-temp-red range"
-      >
-          <h1
-          class="body-2 no-margin semibold-weight white margin-right-2 regular-font"
-        >
-          {{ tag.name }}
-        </h1>
-        <img
-          src="../../../assets/icons/rain.svg"
-          class="offer-card-spacing-icon margin-left-4"
-        />
+      <div *ngFor="let tag of tags" class="container-radius-temp color-temp-red range">
+        <h1 class="body-2 no-margin semibold-weight white margin-right-2 regular-font">{{ tag.name }}</h1>
+        <img src="../../../assets/icons/rain.svg" class="offer-card-spacing-icon margin-left-4" />
       </div>
     </div>
   </div>
-  <div fxLayout="row">
+  <div fxLayout="column" fxLayout.lt-md="row">
     <div class="footer">
       <div>
-        <button
-          mat-button
-          class="body-2 regular-font button-background-color-green width-button-primary"
-          (click)="searchList()"
-        >
-          Detalhes
-        </button>
+        <button mat-button class="body-2 regular-font button-background-color-green width-button-primary" (click)="searchList()">Detalhes</button>
       </div>
       <div>
-        <button
-          mat-button
-          class="body-2 regular-font button-background-color-white width-button-secondary"
-          (click)="changeSituation()"
-        >
+        <button mat-button class="body-2 regular-font button-background-color-white width-button-secondary" (click)="changeSituation()">
           Mudar situação
-          <img
-            src="../../../assets/icons/next.svg"
-            class="icon-wrapper margin-left-4"
-          />
+          <img src="../../../assets/icons/next.svg" class="icon-wrapper margin-left-4" />
         </button>
       </div>
     </div>
