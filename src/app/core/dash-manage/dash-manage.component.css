@@ -1,9 +1,15 @@
-.body{
+.container{
   background-color: white;
   padding: 15px;
   border: 1px solid #c0c0c0;
   border-radius: 15px;
+  margin: 20px;
 }
 .principal{
-  padding: auto;
+  height: 100%;
+}
+iframe {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
